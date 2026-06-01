@@ -1,4 +1,4 @@
-function [wfm,t] = addBLW(wfm_, t_,A,f)
+function [wfm,t] = addBLW(wfm_,t_,A,f)
 
     %%% Add baseline wander to a waveform
     %%% Based on McSharry model (McSharry, 2003)
