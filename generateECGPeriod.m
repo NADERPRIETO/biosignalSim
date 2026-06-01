@@ -1,15 +1,16 @@
-function [wfm, t, T] = generateECGPeriod(s1,s2,c1,c2,f1,f2,ti,th,a,b,dt)
+function [wfm, t, T] = generateECGPeriod(s1,s2,c1,c2,f1,f2,ti,th,a,b,t0,dt)
 
     %%% Generate a single ECG period
     %%% Based on McSharry model (McSharry, 2003)
     
     %%% s1, s2, c1, c2, f1, f2: parameters for generateRRTimeSeries.m parameters
     %%% ti, th, a, b: PQRST parameters
-    %%% dt = time step
+    %%% t0: initial time
+    %%% dt: time step
     
     %%% wfm: waveform (Y values) of single ECG cycle
-    %%% t_f = final time (should be t0+T)
-    %%% T = RR time
+    %%% t: time vector
+    %%% T: period
     
     %%% Period, angular velocity
     [T, w] = generateRRTimeSeries(s1,s2,c1,c2,f1,f2,10);
@@ -32,6 +33,7 @@ function [wfm, t, T] = generateECGPeriod(s1,s2,c1,c2,f1,f2,ti,th,a,b,dt)
             z = z + (a(index)*dth*exp(-dth^2/(2*b(index)^2)));
         end
         wfm(i) = z;
+        t(i) = t(i) + t0;
     end
 
 end
