@@ -1,4 +1,5 @@
 function [wfm, t, T] = generateECGPeriod(s1,s2,c1,c2,f1,f2,ti,th,a,b,dt)
+
     %%% Generate a single ECG period
     %%% Based on McSharry model (McSharry, 2003)
     
