@@ -69,3 +69,7 @@ Debug/
 Release/
 
 .metadata/*
+*.slxc
+*.bin
+/pwm1_ert_rtw
+/slprj
