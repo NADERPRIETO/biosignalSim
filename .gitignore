@@ -73,3 +73,9 @@ Release/
 *.bin
 /pwm1_ert_rtw
 /slprj
+/blink1_ert_rtw
+/Core
+/Drivers
+/STM32CubeIDE
+.mxproject
+script
