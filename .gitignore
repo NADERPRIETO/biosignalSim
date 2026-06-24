@@ -84,4 +84,3 @@ script
 plotConfiguration.m
 firstAttemptAtRecordingECG.mat
 filterParameters.mat
-whiteNoise.m
