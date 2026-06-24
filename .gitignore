@@ -79,3 +79,5 @@ Release/
 /STM32CubeIDE
 .mxproject
 script
+*.autosave
+/sendWfmToPWM_ert_rtw
