@@ -18,7 +18,9 @@ function [wfm, t, T] = generateECGPeriod(s1,s2,c1,c2,f1,f2,ti,th,a,b,t0,dt)
     T = T(1);
     
     %%% time and waveform vectors
-    t = ti(1):dt:(ti(1)+T);
+    t_ini = ti(1);
+    t_fin = t_ini + T;
+    t = t_ini:dt:t_fin;
     wfm = zeros(1,size(t,2));
     
     %%% Basic ECG waveform
