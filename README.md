@@ -8,4 +8,4 @@ Matlab functions are meant to simulate an ECG signal: create a flat (without bas
 
 The workspaces folder contains a few examples of simulated ECG signals, each about 15 seconds long, and the parameters that were used to generate them.
 
-Simulink model can be used to send the waveforms to the PWM output of an STM32 microcontroller.
+Simulink model can be used to send the waveforms to the PWM output of an STM32 microcontroller. Peripherals are configured in the biosignalSim.ioc file.
