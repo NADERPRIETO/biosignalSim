@@ -81,3 +81,7 @@ Release/
 script
 *.autosave
 /sendWfmToPWM_ert_rtw
+plotConfiguration.m
+firstAttemptAtRecordingECG.mat
+filterParameters.mat
+whiteNoise.m
