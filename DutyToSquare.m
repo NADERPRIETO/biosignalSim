@@ -12,15 +12,25 @@ function [wfm, t] = DutyToSquare(t_, n, D)
 
     wfm = [];
     t = [];
+    count = 1;
 
     for i=1:n
         for j=1:nSamples
+            t = [t, dt*(count-1)];
+            count = count + 1;
             if j < nSamplesHigh
                 wfm = [wfm, 1];
             else
                 wfm = [wfm, 0];
             end
-            %t = [t, dt*((i*j)-1)];
+        end
+    end
+
+    if size(t,2) < size(t_,2)
+        for i=1:(abs(size(t,2)-size(t_,2)))
+            t = [t, dt*(count-1)];
+            count = count + 1;
+            wfm = [wfm, 1];
         end
     end
 
